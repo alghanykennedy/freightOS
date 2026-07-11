@@ -10,20 +10,14 @@ import {
   CheckSquare,
   FileText,
   Menu,
-  Compass,
   Wifi,
   Battery,
-  MapPin,
-  Plus,
   Camera,
   Search,
-  User,
-  AlertTriangle,
-  Bell,
   RefreshCw,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
-import { Shipment, Task, Document, ShipmentStatus, TaskStatus } from "../types";
+import { TaskStatus } from "../types";
 
 interface MobileSimulatorProps {
   store: FreightStore;
@@ -35,7 +29,6 @@ export default function MobileSimulator({ store }: MobileSimulatorProps) {
     tasks,
     documents,
     milestones,
-    notifications,
     updateTask,
     updateMilestone,
     addDocument,

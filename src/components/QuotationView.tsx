@@ -5,18 +5,12 @@
 
 import { useState } from "react";
 import {
-  DollarSign,
-  FileText,
-  Plus,
   Ship,
   ArrowRight,
   CheckCircle,
-  ChevronRight,
-  TrendingUp,
-  Info,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
-import { Quotation, ChargeItem } from "../types";
+import { ChargeItem } from "../types";
 
 interface QuotationViewProps {
   store: FreightStore;

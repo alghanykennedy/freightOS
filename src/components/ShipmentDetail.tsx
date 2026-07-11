@@ -9,23 +9,16 @@ import {
   Edit2,
   Calendar,
   FileText,
-  CheckCircle2,
   AlertCircle,
   UploadCloud,
-  Search,
-  Trash2,
-  CheckSquare,
-  MessageSquare,
   Plus,
   Clock,
   File,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
 import {
-  Shipment,
   Milestone,
   Document,
-  Task,
   ShipmentStatus,
   DocumentCategory,
   TaskPriority,
@@ -106,8 +99,6 @@ export default function ShipmentDetail({
   // New Document Upload Simulator
   const [uploadCategory, setUploadCategory] =
     useState<DocumentCategory>("Shipping");
-  const [uploadFile, setUploadFile] = useState<File | null>(null);
-  const [mockFileName, setMockFileName] = useState("");
   const [dragActive, setDragActive] = useState(false);
 
   // Document Viewer
@@ -171,19 +162,11 @@ export default function ShipmentDetail({
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       const file = e.dataTransfer.files[0];
-      setMockFileName(file.name);
       simulateDocumentUpload(file.name);
     }
   };
 
   const simulateDocumentUpload = (fileName: string) => {
-    const categories: DocumentCategory[] = [
-      "Shipping",
-      "Commercial",
-      "Regulatory",
-      "Customs",
-      "Internal",
-    ];
     addDocument({
       shipmentId: shipment.id,
       name: fileName,
@@ -191,7 +174,6 @@ export default function ShipmentDetail({
       status: "Submitted",
       size: (1 + Math.random() * 3).toFixed(1) + " MB",
     });
-    setMockFileName("");
   };
 
   const handleNewTaskSubmit = (e: React.FormEvent) => {

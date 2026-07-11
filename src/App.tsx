@@ -3,7 +3,6 @@ import { useFreightStore } from "./data/useFreightStore";
 import {
   LayoutDashboard,
   Ship,
-  FileText,
   DollarSign,
   Building2,
   Truck,
@@ -17,7 +16,6 @@ import {
   Laptop,
   Menu,
   X,
-  ShieldAlert,
   UserCheck,
 } from "lucide-react";
 

@@ -8,11 +8,6 @@ import {
   Search,
   Folder,
   FileText,
-  CheckCircle2,
-  AlertCircle,
-  Download,
-  ExternalLink,
-  Filter,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
 import { Document, DocumentCategory, DocumentStatus } from "../types";

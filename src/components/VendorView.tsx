@@ -13,12 +13,10 @@ import {
   Search,
   Mail,
   Phone,
-  MapPin,
-  ChevronRight,
   Info,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
-import { Vendor } from "../types";
+
 
 interface VendorViewProps {
   store: FreightStore;

@@ -11,14 +11,11 @@ import {
   Play,
   FileText,
   Plus,
-  Search,
   ChevronRight,
-  User,
   TrendingUp,
   Clock,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
-import { Shipment, Task } from "../types";
 
 interface DashboardViewProps {
   store: FreightStore;

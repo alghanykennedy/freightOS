@@ -6,13 +6,7 @@
 import { useState } from "react";
 import {
   Search,
-  Plus,
-  Filter,
-  CheckSquare,
   Calendar,
-  User,
-  Tag,
-  Clock,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
 import { Task, TaskPriority, TaskStatus } from "../types";
@@ -22,7 +16,7 @@ interface TaskViewProps {
 }
 
 export default function TaskView({ store }: TaskViewProps) {
-  const { tasks, updateTask, currentRole, currentUser, addLog } = store;
+  const { tasks, updateTask, addLog } = store;
   const [searchQuery, setSearchQuery] = useState("");
   const [priorityFilter, setPriorityFilter] = useState<string>("all");
   const [statusFilter, setStatusFilter] = useState<string>("all");

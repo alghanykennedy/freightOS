@@ -10,12 +10,9 @@ import {
   Phone,
   MapPin,
   Search,
-  ChevronRight,
   Star,
-  Plus,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
-import { Client } from "../types";
 
 interface ClientViewProps {
   store: FreightStore;

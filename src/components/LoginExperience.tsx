@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from "react";
-import { Ship, Lock, Mail, ChevronRight, Compass } from "lucide-react";
+import { Lock, Mail, ChevronRight, Compass } from "lucide-react";
 import { UserRole } from "../types";
 
 interface LoginExperienceProps {

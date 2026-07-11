@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Ship, Calendar, MapPin, Building2, User } from "lucide-react";
+import { X, Ship, Calendar, MapPin, Building2 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
 import { ShipmentStatus } from "../types";
 

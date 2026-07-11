@@ -5,14 +5,9 @@
 
 import { useState } from "react";
 import {
-  Settings,
-  MapPin,
-  DollarSign,
   Globe,
   ToggleLeft,
   ToggleRight,
-  Check,
-  Play,
   RefreshCw,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
@@ -22,7 +17,7 @@ interface SettingsViewProps {
 }
 
 export default function SettingsView({ store }: SettingsViewProps) {
-  const { settings, updateSettings, currentRole } = store;
+  const { settings } = store;
 
   // Local state for interactive sync
   const [integrations, setIntegrations] = useState(settings.integrations);
@@ -31,8 +26,8 @@ export default function SettingsView({ store }: SettingsViewProps) {
   const handleSync = (id: string) => {
     setSyncingId(id);
     setTimeout(() => {
-      setIntegrations((prev) =>
-        prev.map((int) =>
+      setIntegrations((prev: any[]) =>
+        prev.map((int: any) =>
           int.id === id
             ? {
                 ...int,
@@ -50,8 +45,8 @@ export default function SettingsView({ store }: SettingsViewProps) {
   };
 
   const handleToggleActive = (id: string) => {
-    setIntegrations((prev) =>
-      prev.map((int) =>
+    setIntegrations((prev: any[]) =>
+      prev.map((int: any) =>
         int.id === id
           ? {
               ...int,
@@ -144,7 +139,7 @@ export default function SettingsView({ store }: SettingsViewProps) {
             <div
               className="grid grid-cols-1 sm:grid-cols-2 gap-3.5"
               id="settings-branches">
-              {settings.branches.map((branch, idx) => (
+              {settings.branches.map((branch: any, idx: number) => (
                 <div
                   key={idx}
                   className="p-3 bg-slate-50 border border-slate-150 rounded-xl flex items-center gap-3">
@@ -174,7 +169,7 @@ export default function SettingsView({ store }: SettingsViewProps) {
             </h3>
 
             <div className="space-y-4" id="integrations-list">
-              {integrations.map((int) => (
+              {integrations.map((int: any) => (
                 <div
                   key={int.id}
                   className="p-3 bg-slate-50 border border-slate-150 rounded-xl space-y-3">
@@ -231,7 +226,7 @@ export default function SettingsView({ store }: SettingsViewProps) {
               Milestones Pipeline
             </h3>
             <div className="space-y-1.5 font-mono text-[9px] text-slate-600">
-              {settings.milestoneTemplates.map((name, idx) => (
+              {settings.milestoneTemplates.map((name: string, idx: number) => (
                 <div
                   key={idx}
                   className="flex items-center gap-2 py-1 border-b border-slate-50 last:border-none">

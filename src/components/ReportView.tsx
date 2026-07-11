@@ -10,8 +10,6 @@ import {
   TrendingUp,
   DollarSign,
   Calendar,
-  BarChart3,
-  PieChart,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
 
@@ -20,7 +18,7 @@ interface ReportViewProps {
 }
 
 export default function ReportView({ store }: ReportViewProps) {
-  const { shipments, quotations } = store;
+  const { shipments } = store;
   const [exportLoading, setExportLoading] = useState<string | null>(null);
 
   // Derive counts

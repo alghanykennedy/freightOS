@@ -6,19 +6,13 @@
 import { useState } from "react";
 import {
   Search,
-  Filter,
   LayoutGrid,
   List,
   Plus,
-  MapPin,
-  Calendar,
-  User,
-  Ship,
-  ChevronRight,
   Trash2,
 } from "lucide-react";
 import { FreightStore } from "../data/useFreightStore";
-import { Shipment, ShipmentStatus } from "../types";
+import { ShipmentStatus } from "../types";
 import CreateShipmentModal from "./CreateShipmentModal";
 
 interface ShipmentViewProps {
@@ -30,7 +24,6 @@ interface ShipmentViewProps {
 export default function ShipmentView({
   store,
   onSelectShipment,
-  onOpenCreateModal,
 }: ShipmentViewProps) {
   const { shipments, currentRole } = store;
 

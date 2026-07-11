@@ -15,8 +15,7 @@ import {
   Client,
   Vendor,
   Notification,
-  ActivityLog,
-  ShipmentStatus
+  ActivityLog
 } from '../types';
 import {
   MOCK_USERS,
@@ -84,12 +83,12 @@ export function useFreightStore() {
     return saved ? JSON.parse(saved) : MOCK_QUOTATIONS;
   });
 
-  const [clients, setClients] = useState<Client[]>(() => {
+  const [clients] = useState<Client[]>(() => {
     const saved = localStorage.getItem('f_clients');
     return saved ? JSON.parse(saved) : MOCK_CLIENTS;
   });
 
-  const [vendors, setVendors] = useState<Vendor[]>(() => {
+  const [vendors] = useState<Vendor[]>(() => {
     const saved = localStorage.getItem('f_vendors');
     return saved ? JSON.parse(saved) : MOCK_VENDORS;
   });
