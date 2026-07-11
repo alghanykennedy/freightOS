@@ -48,7 +48,7 @@ export function useFreightStore() {
   // Authentication State
   const [currentUser, setCurrentUser] = useState<User | null>(() => {
     const saved = localStorage.getItem('f_currentUser');
-    return saved ? JSON.parse(saved) : MOCK_USERS[0]; // Default to Alghany Kennedy (Admin) for instant onboarding, but allow logout to experience the Login screen
+    return saved ? JSON.parse(saved) : null; // Start at login page by default
   });
 
   // Current Working Role (for RBAC testing/toggle)
