@@ -12,7 +12,7 @@ interface LoginExperienceProps {
 }
 
 export default function LoginExperience({ onLogin }: LoginExperienceProps) {
-  const [email, setEmail] = useState("alghany.t@freightos.com");
+  const [email, setEmail] = useState("alghany.k@freightos.com");
   const [password, setPassword] = useState("••••••••");
   const [role, setRole] = useState<UserRole>("Admin");
   const [rememberMe, setRememberMe] = useState(true);
@@ -309,7 +309,9 @@ export default function LoginExperience({ onLogin }: LoginExperienceProps) {
               <button
                 type="button"
                 className="p-2 border border-slate-200 rounded-xl hover:bg-slate-50 text-left transition-all"
-                onClick={() => selectDemoUser("alghany.t@freightos.com", "Admin")}>
+                onClick={() =>
+                  selectDemoUser("alghany.k@freightos.com", "Admin")
+                }>
                 <div className="flex items-center gap-2">
                   <img
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=40&h=40&q=80"

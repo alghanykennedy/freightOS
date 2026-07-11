@@ -6,7 +6,7 @@
 import { Shipment, Milestone, Document, Task, Quotation, Client, Vendor, Notification, ActivityLog, User } from '../types';
 
 export const MOCK_USERS: User[] = [
-  { id: 'usr-1', name: 'Alghany Kennedy Adam', email: 'alghany.t@freightos.com', role: 'Admin', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80', company: 'FreightOS Jakarta' },
+  { id: 'usr-1', name: 'Alghany Kennedy Adam', email: 'alghany.k@freightos.com', role: 'Admin', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80', company: 'FreightOS Jakarta' },
   { id: 'usr-2', name: 'Sarah Jenkins', email: 'sarah.j@freightos.com', role: 'Manager', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80', company: 'FreightOS Singapore' },
   { id: 'usr-3', name: 'Raka Ardiansyah', email: 'raka.a@freightos.com', role: 'Operations', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80', company: 'FreightOS Jakarta' },
   { id: 'usr-4', name: 'Michael Chang', email: 'm.chang@freightos.com', role: 'Sales', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80', company: 'FreightOS Shanghai' },
